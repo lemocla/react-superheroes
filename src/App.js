@@ -1,3 +1,4 @@
+import React from 'react';
 
 import './App.css';
 
@@ -9,6 +10,6 @@ const App = () => {
       <p></p>
     </div>
   );
-}
+};
 
 export default App;
