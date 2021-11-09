@@ -1,18 +1,39 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Header from './components/layout/Header';
 import Search from './components/heroes/Search';
+import Alert from './components/layout/Alert';
 import Hero from './components/heroes/Hero';
 import Home from './components/pages/Home';
 import Heroespage from './components/pages/Heroespage';
 import './App.css';
+import axios from 'axios';
 
 const App = () => {
+  const [heroes, setHeroes] = useState({});
+  const [alert, setAlert] = useState(null);
+
+  // Search for a single Superhero
+  const searchHeroes = async (text) => {
+    const res = await axios.get(
+      'https://akabab.github.io/superhero-api/api/all.json'
+    );
+
+    setHeroes(res.data.filter((record) => record.name === 'a-bomb'));
+    console.log(res.data);
+  };
+
+  // Set an Alert
+  const showAlert = (msg, type) => {
+    setAlert({ msg, type });
+    setTimeout(() => setAlert(null), 5000);
+  };
+
   return (
     <div>
       <BrowserRouter>
         <Header />
-        <Search />
+        <Search searchHeroes={searchHeroes} showAlert={showAlert} />
         <div className='container-fluid px-5'>
           <Routes>
             <Route path='/' element={<Home />} />
