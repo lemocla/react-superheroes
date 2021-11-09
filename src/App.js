@@ -1,13 +1,25 @@
-
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Hero from './components/heroes/Hero';
+import Home from './components/pages/Home';
+import Heroespage from './components/pages/Heroespage';
 import './App.css';
+
 
 const App = () => {
   return (
     <div>
-      <h1>HELLO APP</h1>
-      <p>Welcome to super heroes</p>
-      <p></p>
+
+      <div className="container-fluid px-5">
+      <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home/>} />
+        <Route path="heroes" element={<Heroespage/>}/>
+        <Route path="hero" element={<Hero/>} />
+      </Routes>
+    </BrowserRouter>
+      </div>
     </div>
+    
   );
 }
 
