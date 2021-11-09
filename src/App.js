@@ -1,3 +1,4 @@
+import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Hero from './components/heroes/Hero';
 import Home from './components/pages/Home';
@@ -21,6 +22,6 @@ const App = () => {
     </div>
     
   );
-}
+};
 
 export default App;
