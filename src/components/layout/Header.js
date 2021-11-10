@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 const Header = () => {
   return (
-    <nav className='navbar navbar-expand-lg navbar-light bg-light'>
+    <nav className='navbar navbar-expand-lg navbar-expand-lg navbar-dark bg-dark py-3'>
       <div className='container-fluid'>
         <Link to='/' className='navbar-brand text-uppercase ml-3'>
           Superheroes
@@ -28,9 +28,19 @@ const Header = () => {
             </li>
             <li className='nav-item'>
               <Link to='Heroes' className='nav-link'>
-                Heroes
+                All heroes
               </Link>
             </li>
+            <li className='nav-item'>
+              <Link to='marvel' className='nav-link'>
+                Marvel
+              </Link>
+            </li>
+            <li className='nav-item'>
+              <Link to='dc' className='nav-link'>
+                DC
+              </Link>
+            </li>                        
             <li className='nav-item'>
               <Link to='/' className='nav-link'>
                 Games
