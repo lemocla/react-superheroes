@@ -11,8 +11,12 @@
 
 body {
   font-family: 'Montserrat', sans-serif;
+  
 }
 
+.main{
+ min-height: 75.5vh;
+}
 /*-------------[ headings ]--------------*/
 
 h1, h2, .alignment {
@@ -38,9 +42,16 @@ h5 {
   padding: 0 !important;
 }
 
-a{
+a, a:hover {
   text-decoration: none;
+  color: inherit;
 }
+
+.footer-a:hover{
+  transform: scale(1.005);
+  color: rgb(185, 184, 184) !important;
+}
+
 /*----------[ Navbar ]----------*/
 
 .navbar-brand {
@@ -107,6 +118,9 @@ a{
   width: 50%;
   border-radius: 3px;
 }
+
+
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
