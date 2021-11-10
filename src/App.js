@@ -10,7 +10,7 @@ import './App.css';
 import axios from 'axios';
 
 const App = () => {
-  const [heroes, setHeroes] = useState({});
+  const [hero, setHero] = useState({});
   const [alert, setAlert] = useState(null);
 
   // Search for a single Superhero
@@ -19,8 +19,12 @@ const App = () => {
       'https://akabab.github.io/superhero-api/api/all.json'
     );
 
-    setHeroes(res.data.filter((record) => record.name === 'a-bomb'));
-    console.log(res.data);
+    setHero(
+      res.data.filter((record) =>
+        record.name.toLowerCase().includes(text.toLowerCase())
+      )
+    );
+    console.log(setHero);
   };
 
   // Set an Alert
