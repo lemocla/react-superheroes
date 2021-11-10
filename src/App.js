@@ -4,7 +4,7 @@ import Header from './components/layout/Header';
 import Hero from './components/heroes/Hero';
 import Home from './components/pages/Home';
 import Heroes from './components/heroes/Heroes';
-
+import Footer from './components/layout/Footer';
 import './App.css';
 
 const App = () => {
@@ -12,7 +12,7 @@ const App = () => {
     <div>
       <BrowserRouter>
         <Header />
-        <div className='container-fluid px-5'>
+        <div className='container-fluid px-5 main'>
           <Routes>
             <Route path='/' element={<Home />} />
             <Route path='marvel' element={<Heroes publisher="Marvel Comics" title="Marvel Comics"/>} />
@@ -21,6 +21,7 @@ const App = () => {
             <Route path='hero/:id' element={<Hero />} />
           </Routes>
         </div>
+        <Footer />
       </BrowserRouter>
     </div>
   );

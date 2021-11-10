@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 const Header = () => {
   return (
-    <nav className='navbar navbar-expand-lg navbar-expand-lg navbar-dark bg-dark py-3'>
+    <nav className='navbar navbar-expand-lg navbar-expand-lg navbar-dark bg-black py-3'>
       <div className='container-fluid'>
         <Link to='/' className='navbar-brand text-uppercase ml-3'>
           Superheroes
