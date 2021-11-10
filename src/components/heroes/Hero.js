@@ -1,11 +1,13 @@
 import React, {useEffect, useState, Fragment } from 'react';
 import Api from '../Api/Api';
 import '../../App.css';
-import { useParams } from 'react-router';
-import { Link } from 'react-router-dom'
+import { useParams, useNavigate } from 'react-router';
+
 const Hero = ({match}) => {
 
-      // API Call
+  const navigate = useNavigate();
+  
+  // API Call --> to superhero API
   const [heroSingle, setHero] = useState([]);
   const [ready, setReady] = useState(false);
   const { id } = useParams();
@@ -19,27 +21,27 @@ const Hero = ({match}) => {
       
     };
     fetchApi();
-    console.log("api")
-    console.log(id)
-    console.log(heroSingle)
   }, [id]);
 
   const { image, name, biography, connections, work, powerstats } = heroSingle;
-
-
-
+  
+  // Back function
+  function handleClick() {
+    navigate(-1)
+  }
+  // Display hero information
 
     return ready ? (
 
       <Fragment>
-        <Link to="/heroes" className='btn btn-dark text-white fw-bold text-uppercase mt-4' >Back</Link>  
+        <button onClick={handleClick} className='btn btn-dark text-white fw-bold text-uppercase mt-4' >Back</button>  
         <div className="row mt-3">
-          <div className="col-12 col-md-5 pt-2">
+          <div className="col-12 col-md-6 col-xl-5 pt-2">
             <img className="img-fluid shadow" src={image.url} alt={name} />
           </div>
 
-          <div className="col-12 col-md-7">
-            <h1>
+          <div className="col-12 col-md-6 col-xl-7">
+            <h1 className='mt-4 mt-md-0'>
               {name}
               <span
                 style={{ float: "right" }}
@@ -57,8 +59,8 @@ const Hero = ({match}) => {
               <ul>
               <li>Alter ego: {biography['full-name'] != "" ? biography['full-name'] : 'No alter ego known'}</li>
               <li>Place of birth: {biography['place-of-birth'] != "-" ? biography['place-of-birth'] : 'Not known'}</li>
-              {work.occupation != "-" ? <li>Occupation:  {work.occupation} </li> : "" }
-              {connections.relatives != "" ? <li>Relatives:  {connections.relatives} </li> : "" }
+              {work.occupation !== "-" ? <li>Occupation:  {work.occupation} </li> : "" }
+              {connections.relatives !== "" ? <li>Relatives:  {connections.relatives} </li> : "" }
               <li>First appearance: {biography['first-appearance']}</li>
               <li>Publisher: {biography.publisher}</li>           
               </ul>
