@@ -19,6 +19,9 @@ const Home = () => {
   return (
     <Fragment>
       <div className='row d-flex justify-content-center align-content-center mt-5 p0'>
+      <h1 className="text-center mb-4 mt-3">Meet the super heroes</h1>
+      <p className="text-center fs-5">Discover all there is to know about your favourite super heroes and more!</p>
+      <p className='text-center fs-5 mb-5'>Watch this space for more games to come...</p>
       <Link to='/marvel' className='card card-home-width shadow p0 mx-2'>
           <img
             className='card-img-top img-card-home radius-top'
