@@ -30,6 +30,17 @@ h5 {
   font-family: 'Bungee', cursive;
 }
 
+/*----------[ Links ]-----------*/
+
+.card-home-width:hover, .card:hover {
+  transform: scale(1.005);
+  box-shadow: 0px 9px 30px 0 rgb(0 0 0 / 35%), 0px 15px 30px 0 rgb(0 0 0 / 30%) !important;
+  padding: 0 !important;
+}
+
+a{
+  text-decoration: none;
+}
 /*----------[ Navbar ]----------*/
 
 .navbar-brand {
@@ -50,11 +61,7 @@ h5 {
   border: none;
 }
 
-.card-home-width:hover {
-  transform: scale(1.005);
-  box-shadow: 0px 9px 30px 0 rgb(0 0 0 / 35%), 0px 15px 30px 0 rgb(0 0 0 / 30%) !important;
-  padding: 0;
-}
+
 
 .img-card-home {
   height: 320px;
@@ -62,6 +69,10 @@ h5 {
 }
 
 /*------------[ Heroes page card ]------------*/
+.card{
+  text-decoration: none;
+  padding: 0;
+}
 
 .card-width {
   min-width: 18em;
