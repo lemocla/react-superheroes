@@ -22,7 +22,7 @@ const HeroItem = ({ id }) => {
 
   // Render html card for individual heroes when ready - if not ready, then null
   return ready ? (
-    <div className="col mb-5">
+    <Link to={`/hero/${id}`} id={id} className="col mb-5" >
       <div className="card card-width shadow">
         <img
           className="card-img-top hero-img radius-top"
@@ -33,7 +33,7 @@ const HeroItem = ({ id }) => {
           <h5 className="card-title text-center text-white">{heroData.name}</h5>
         </div>
       </div>
-    </div>
+    </Link>
   ) : null;
 };
 

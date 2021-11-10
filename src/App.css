@@ -15,12 +15,17 @@ body {
 
 /*-------------[ headings ]--------------*/
 
-h1 {
+h1, h2, .alignment {
   font-family: 'Bungee', cursive;
   font-weight: bold;
   font-style: italic;
+  margin-bottom: 0;
+  line-height: inherit;
 }
 
+.alignment {
+  font-size: 2rem;
+}
 h5 {
   font-family: 'Bungee', cursive;
 }
@@ -79,6 +84,18 @@ h5 {
   box-shadow: 5px 8px 30px 0 rgb(0 0 0 / 30%), 0 8px 25px 0 rgb(0 0 0 / 15%) !important;
 }
 
+/*----------------[ HERO PAGE ]------------------------*/
+
+.img-fluid {
+  width: 100%;
+  border-radius: 4px;
+}
+
+.div-shape{
+  clip-path: polygon(1% 0, 100% 0%, 99% 100%, 0% 100%);
+  width: 50%;
+  border-radius: 3px;
+}
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
