@@ -26,7 +26,7 @@
             alt='super heroes batlle'
           />
           <div className='card-body bg-black py-4 radius-bottom'>
-            <h5 className='card-title text-center text-white'>Battles of Heroes</h5>
+            <h5 className='card-title text-center text-white'>Battle</h5>
           </div>
         </div>
 
@@ -37,7 +37,7 @@
             alt='super heroes quizz'
           />
           <div className='card-body bg-black py-4 radius-bottom'>
-            <h5 className='card-title text-center text-white'>Quizz</h5>
+            <h5 className='card-title text-center text-white'>Quiz</h5>
           </div>
         </div>
 

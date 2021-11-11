@@ -1,28 +1,29 @@
-
-import React, { Fragment, useState, useEffect } from "react";
+import React, {
+  Fragment,
+  useState,
+  useContext,
+} from "react";
+import heroesContext from "../context/heroes/heroesContext";
 
 const Filter = (props) => {
-  const [filter, setFilter] = useState("All");
+  // Set state publisher
   const [publisher, setPublisher] = useState(props.publisher);
-  
-  useEffect(() => {
-    props.func('All')
-  })
+
+  // Initialize context
+  const HeroesContext = useContext(heroesContext);
+  const { setFilter, resetFilter, filter } = HeroesContext;
 
   // Set publisher when navigation is updated
   if (publisher !== props.publisher) {
     setPublisher(props.publisher);
   }
 
-  // On click function - when option  is selected
+  // Filter hero db on click of dropdown select field
   const onClick = (e) => {
-    let filterValue = e.target.value;
-    props.func(e.target.value); //pass value to heroespage
-    setFilter(filterValue);
+    setFilter(e.target.value); // set filter from heroesState
   };
 
   // Arrays
-
   let featuredCategories = [];
   if (publisher === "Marvel Comics") {
     featuredCategories = [
@@ -35,7 +36,6 @@ const Filter = (props) => {
       "Thunderbolts",
       "S.H.I.E.L.D.",
       "Defenders",
-      "All",
     ].sort();
   } else if (publisher === "DC Comics") {
     featuredCategories = [
@@ -45,8 +45,7 @@ const Filter = (props) => {
       "Joker",
       "Legion of Super-Heroes",
       "Aquaman family",
-      "All",
-    ].sort();
+    ];
   } else {
     featuredCategories = [
       "X-Men",
@@ -56,29 +55,27 @@ const Filter = (props) => {
       "Fantastic Four",
       "Teen Titans",
       "Joker League of Anarchy",
-      "All",
-    ].sort();
+    ];
   }
 
-  // Options
-
+  // Options Items
   const otpionItems = featuredCategories.map((cat) => (
-    <option  key={cat} value={cat}>
+    <option key={cat} value={cat}>
       {cat}
     </option>
   ));
 
   return (
     <Fragment>
-      <label className="fs-6 fw-bold" htmlFor="featured-groups">
-        Filter by featured groups
-      </label>
       <select
         className="py-1 px-1 form-select"
         name="featured-groups"
         id="featured-groups"
         onChange={onClick}
       >
+        <option id="default" selected>
+          Filter by featured groups
+        </option>
         {otpionItems}
       </select>
     </Fragment>
