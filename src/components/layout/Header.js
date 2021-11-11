@@ -27,17 +27,17 @@ const Header = () => {
               </Link>
             </li>
             <li className='nav-item'>
-              <Link to='Heroes' className='nav-link'>
+              <Link to='/heroes' className='nav-link'>
                 All heroes
               </Link>
             </li>
             <li className='nav-item'>
-              <Link to='marvel' className='nav-link'>
+              <Link to='/marvel' className='nav-link'>
                 Marvel
               </Link>
             </li>
             <li className='nav-item'>
-              <Link to='dc' className='nav-link'>
+              <Link to='/dc' className='nav-link'>
                 DC
               </Link>
             </li>                        
