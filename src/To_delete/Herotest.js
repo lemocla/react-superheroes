@@ -1,36 +1,33 @@
-import React, {useEffect, useState, Fragment } from 'react';
+import React, {useEffect, useState, Fragment, useContext } from 'react';
 import Api from '../Api/Api';
 import '../../App.css';
 import { useParams, useNavigate } from 'react-router';
+import heroesContext from "../context/heroes/heroesContext";
 
-const Hero = ({match}) => {
+
+
+const Herotest = ({match}) => {
 
   const navigate = useNavigate();
-  
-  // API Call --> to superhero API
-  const [heroSingle, setHero] = useState([]);
-  const [ready, setReady] = useState(false);
-  const { id } = useParams();
+  const HeroesContext = useContext(heroesContext);
+  // desctructure
+  const { heroSingle, getHero } = HeroesContext;
+  const { image, name, biography, connections, work, powerstats } = heroSingle; 
 
   useEffect(() => {
-    const fetchApi = async () => {
-      const { data } = await Api.get(`/${id}`);
-      setHero(data);
-      setReady(true);
-    };
-    fetchApi();
-  }, [id]);
+    getHero();
+    // eslint-disable-next-line
+  }, []);
 
-  // Destructure hero data information
-  const { image, name, biography, connections, work, powerstats } = heroSingle;
+ 
   
   // Back function
   function handleClick() {
     navigate(-1)
   }
-
   // Display hero information
-    return ready ? (
+
+    return (
 
       <Fragment>
         <button onClick={handleClick} className='btn btn-dark text-white fw-bold text-uppercase mt-4' >Back</button>  
@@ -96,7 +93,7 @@ const Hero = ({match}) => {
           </div>
         </div>
       </Fragment>
-    ) : null;
+    );
 }
 
-export default Hero
+export default Herotest

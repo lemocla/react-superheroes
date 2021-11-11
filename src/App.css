@@ -11,12 +11,12 @@
 
 body {
   font-family: 'Montserrat', sans-serif;
-  
 }
 
 .main{
  min-height: 75.5vh;
 }
+
 /*-------------[ headings ]--------------*/
 
 h1, h2, .alignment {
@@ -72,17 +72,17 @@ a, a:hover {
   border: none;
 }
 
-
-
 .img-card-home {
   height: 320px;
   object-fit: cover;
 }
 
 /*------------[ Heroes page card ]------------*/
+
 .card{
   text-decoration: none;
   padding: 0;
+  max-width: 20em;
 }
 
 .card-width {

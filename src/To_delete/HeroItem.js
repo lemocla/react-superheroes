@@ -7,7 +7,6 @@ const HeroItem = ({ hero} ) => {
    
   // Render html card for individual heroes in Heroes.js
   return (
- 
     <Link to={`/hero/${hero.id}`} id={hero.id} className="col mb-5" >
       <div className="card card-width shadow">
         <img
