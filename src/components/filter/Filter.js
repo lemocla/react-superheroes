@@ -11,7 +11,7 @@ const Filter = (props) => {
 
   // Initialize context
   const HeroesContext = useContext(heroesContext);
-  const { setFilter, resetFilter, filter } = HeroesContext;
+  const { setFilter } = HeroesContext;
 
   // Set publisher when navigation is updated
   if (publisher !== props.publisher) {

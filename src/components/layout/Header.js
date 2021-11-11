@@ -86,16 +86,16 @@ const Header = (props) => {
               </Link>
             </li>
           </ul>
-          <form class="d-flex" onSubmit={onSubmit}>
+          <form className="d-flex" onSubmit={onSubmit}>
             <input
-              class="form-control me-2 ms-3"
+              className="form-control me-2 ms-3"
               type="search"
               placeholder="Search by name"
               aria-label="Search"
               value={text}
               onChange={onChange}
             />
-            <button class="btn btn-outline-light" type="submit">
+            <button className="btn btn-outline-light" type="submit">
               Search
             </button>
           </form>

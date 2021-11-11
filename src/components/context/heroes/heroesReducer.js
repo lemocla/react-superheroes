@@ -22,7 +22,6 @@ export default (state, action) => {
         heroes: action.payload,
         publisher: action.publisher,
       };
-
     case SET_FILTER:
       return {
         ...state,
@@ -43,7 +42,7 @@ export default (state, action) => {
       return {
         ...state,
         filter: null,
-        filterName: null,
+        filterName: action.playload,
       };
     case SEARCH_HEROES: // take text value as payload and filter heroes payload
       return {
