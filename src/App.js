@@ -5,6 +5,7 @@ import Hero from './components/heroes/Hero';
 import Home from './components/pages/Home';
 import Footer from './components/layout/Footer';
 import Heroespage from './components/pages/Heroespage';
+import Game from './components/pages/Game';
 import './App.css';
 
 const App = () => {
@@ -19,7 +20,7 @@ const App = () => {
             <Route path='dc' element={<Heroespage filter='All' publisher="DC Comics" title="DC Comics"/>}/>
             <Route path='heroes' element={<Heroespage filter='All' publisher="" title="All DC & Marvel Super Heroes"/>} />
             <Route path='hero/:id' element={<Hero />} />
-          
+            <Route path='game' element={<Game />} />
           </Routes>
         </div>
         <Footer />
