@@ -26,7 +26,7 @@ const Home = () => {
           <img
             className='card-img-top img-card-home radius-top'
             src='https://i.guim.co.uk/img/media/e191a8c89021d04e57d54dadda6a12b79a8c86ea/0_26_800_480/master/800.jpg?width=1200&quality=85&auto=format&fit=max&s=2368d242e91f23f896d63fb5bfaaf1b2'
-            alt='Card image cap'
+            alt='marvel heroes'
           />
           <div className='card-body bg-black py-4 radius-bottom'>
             <h5 className='card-title text-center text-white'>MARVEL</h5>
@@ -37,7 +37,7 @@ const Home = () => {
           <img
             className='card-img-top img-card-home radius-top'
             src='https://www.dccomics.com/sites/default/files/DCVol2Marquee_57466713405381.60938022.jpg'
-            alt='Card image cap'
+            alt='DC heroes'
           />
           <div className='card-body bg-black py-4 radius-bottom'>
             <h5 className='card-title text-center text-white'>DC COMICS</h5>

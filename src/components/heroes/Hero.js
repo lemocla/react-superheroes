@@ -57,8 +57,8 @@ const Hero = ({match}) => {
             <div className="col-12 mt-4">
               <h2 className="mb-3">Biography</h2>
               <ul>
-              <li>Alter ego: {biography['full-name'] != "" ? biography['full-name'] : 'No alter ego known'}</li>
-              <li>Place of birth: {biography['place-of-birth'] != "-" ? biography['place-of-birth'] : 'Not known'}</li>
+              <li>Alter ego: {biography['full-name'] !== "" ? biography['full-name'] : 'No alter ego known'}</li>
+              <li>Place of birth: {biography['place-of-birth'] !== "-" ? biography['place-of-birth'] : 'Not known'}</li>
               {work.occupation !== "-" ? <li>Occupation:  {work.occupation} </li> : "" }
               {connections.relatives !== "" ? <li>Relatives:  {connections.relatives} </li> : "" }
               <li>First appearance: {biography['first-appearance']}</li>
