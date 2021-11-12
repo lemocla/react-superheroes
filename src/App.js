@@ -18,7 +18,7 @@ const App = () => {
     <HeroesState>
       <BrowserRouter>
         <Header />
-        <div className='container-fluid px-5 main'>
+        <div className='container main'>
           <Routes>
             <Route path='/' element={<Home />} />
             <Route path='marvel' element={<Heroes  publisher="Marvel Comics" title="Marvel Comics"/>} />

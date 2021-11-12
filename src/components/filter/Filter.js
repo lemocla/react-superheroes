@@ -27,34 +27,34 @@ const Filter = (props) => {
   let featuredCategories = [];
   if (publisher === "Marvel Comics") {
     featuredCategories = [
-      "X-Men",
       "Avengers",
       "Asgardians",
-      "Guardians of the Galaxy",
-      "Fantastic Four",
-      "Hydra",
-      "Thunderbolts",
-      "S.H.I.E.L.D.",
       "Defenders",
-    ].sort();
+      "Fantastic Four",
+      "Guardians of the Galaxy",
+      "Hydra",
+      "S.H.I.E.L.D.",
+      "Thunderbolts",
+      "X-Men"
+    ]
   } else if (publisher === "DC Comics") {
     featuredCategories = [
-      "Batman Family",
-      "Justice League",
-      "Teen Titans",
-      "Joker",
-      "Legion of Super-Heroes",
       "Aquaman family",
+      "Batman Family",
+      "Joker",
+      "Justice League",
+      "Legion of Super-Heroes",
+      "Teen Titans", 
     ];
   } else {
     featuredCategories = [
-      "X-Men",
       "Avengers",
-      "Justice League",
-      "Guardians of the Galaxy",
       "Fantastic Four",
-      "Teen Titans",
+      "Guardians of the Galaxy",
       "Joker League of Anarchy",
+      "Justice League",
+      "Teen Titans",
+      "X-Men",
     ];
   }
 
@@ -68,12 +68,12 @@ const Filter = (props) => {
   return (
     <Fragment>
       <select
-        className="py-1 px-1 form-select"
+        className="py-1 px-1 px-lg-3 form-select"
         name="featured-groups"
         id="featured-groups"
         onChange={onClick}
       >
-        <option id="default" selected>
+        <option id="default" value="default" selected>
           Filter by featured groups
         </option>
         {otpionItems}

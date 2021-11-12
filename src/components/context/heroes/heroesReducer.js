@@ -34,7 +34,6 @@ export default (state, action) => {
         }),
       };
     case SET_SELECT_DEFAULT: // Reset the default value for select field
-      console.log("test to change selected");
       if (document.getElementById("featured-groups") != null) {
         document.getElementById("featured-groups").selectedIndex = 0;
       }
