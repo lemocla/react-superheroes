@@ -29,7 +29,6 @@ const Header = (props) => {
     // Alert
     if (text === "") {
     } else {
-      console.log("submit event");
       resetFilter(); // Reset filter if on for search
       setSelect(); // Set default select
       searchHeroes(text); //Search heroes
@@ -42,7 +41,7 @@ const Header = (props) => {
   const onChange = (e) => setText(e.target.value); // set text to input value
 
   return (
-    <nav className="navbar navbar-expand-lg navbar-expand-lg navbar-dark bg-black py-3">
+    <nav className="navbar navbar-expand-lg navbar-expand-lg navbar-dark bg-black py-3 px-3">
       <div className="container-fluid">
         <Link to="/" className="navbar-brand text-uppercase ml-3">
           Superheroes

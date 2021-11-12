@@ -45,11 +45,11 @@ const Heroes = (props) => {
   
   return (
     <Fragment>
-      <div className="row mt-4">
-        <div className="col-9">
+      <div className="row mt-4 d-flex justify-content-between">
+        <div className="col-md-7 col-lg-8 col-xl--9">
           <h1>{props.title} {filter !== null ? `- ${filterName}` : null}</h1>
         </div>
-        <div className="col-3">
+        <div className="col-md-5 col-lg-4 col-xl-3 pt-3">
           {! search ?<Filter publisher={props.publisher} filter={props.filter}/> : null }
         </div>
       </div> 

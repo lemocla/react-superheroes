@@ -39,7 +39,7 @@ const Hero = ({match}) => {
             <img className="img-fluid shadow" src={image.url} alt={name} />
           </div>
 
-          <div className="col-12 col-md-6 col-xl-7">
+          <div className="col-12 col-md-6 col-xl-7 ps-xl-5">
             <h1 className='mt-4 mt-md-0'>
               {name}
               <span
